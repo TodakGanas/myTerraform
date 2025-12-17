@@ -53,6 +53,7 @@ resource "docker_container" "ollama" {
     ports {
         internal = 11434
         external = 11434
+        ip = "127.0.0.1"
     }
 
     volumes {
@@ -86,6 +87,7 @@ resource "docker_container" "webui" {
     ports {
         internal = "8080"
         external = "3000"
+        ip = "127.0.0.1"
     }
 
     env = [
